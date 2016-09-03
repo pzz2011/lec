@@ -24,6 +24,22 @@ private:
     int a, b, c;
 };
 
+
+class dog { 
+public:
+    dog(const string& name_):name(name_){ }
+    dog& operator= (const dog& otherdog) {
+        name = otherdog.name;
+        return *this;
+    }
+
+    friend ostream& operator<< (ostream& os, const dog& otherdog) {
+        return os << "[dog " << otherdog.name << "]";
+    }
+private:
+    string name;
+};
+
 int main() {
     value v1(1, 2, 3);
     value v2(1, 2, 4);
