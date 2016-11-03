@@ -10,6 +10,8 @@ public:
 
     float x() { return x_; }
     void setx(float x) { x_ = x; }
+
+    virtual ~point() {  }
 private:
     float x_;
 };
@@ -22,6 +24,8 @@ public:
 
     float y() { return y_; }
     void sety(float y) { y_ = y; }
+    
+    virtual ~point2d() {  }
 private:
     float y_;
 };
@@ -34,9 +38,15 @@ public:
 
     float z() { return z_; }
     void setz(float z) { z_ = z; }
+
+    virtual ~point3d() {  }
 private: 
     float z_;
 };
+
+
+
+
 
 
 int main() {
@@ -44,8 +54,8 @@ int main() {
     point* p2 = new point2d(1,2);
     point3d* p3 = new point3d(3,4,5);
 
-    point2d *p22 = dynamic_cast<point2d*>(p2); // source type is not polymorphic
-    cout << p22->y() << endl;
+    point2d *p22 = dynamic_cast<point2d*>(p2); // at this moment, the source type is polymorphic, in consequence the
+    cout << p22->y() << endl;                  // dynamic_cast convertion success
 
 //    cout << p1->x() << endl;
 //    cout << p2->y() << endl;
