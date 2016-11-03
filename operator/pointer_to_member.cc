@@ -3,7 +3,11 @@
 #include<cstring>
 using namespace std;
 
-// point to member example
+// point to member example  
+// http://stackoverflow.com/questions/670734/c-pointer-to-class-data-member
+
+
+
 class Car { 
 public: 
     int speed;
