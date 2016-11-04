@@ -61,7 +61,9 @@ int main() {
 
     cout << "^^^^^^^^^^^^^^^^^^^^^^^" << endl;
     cout << (*p3)[0]<< endl;
-//    cout << p3->[1]<< endl;
-//    cout << p3->[2]<< endl;
+//    cout << p3->[1]<< endl; // error
+//    cout << p3->[2]<< endl; // error
+    
+    
     return 0;
 }

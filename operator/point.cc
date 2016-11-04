@@ -56,13 +56,16 @@ int main() {
 
     point2d *p22 = dynamic_cast<point2d*>(p2); // at this moment, the source type is polymorphic, in consequence the
     cout << p22->y() << endl;                  // dynamic_cast convertion success
-
+    
 //    cout << p1->x() << endl;
 //    cout << p2->y() << endl;
 //    cout << p3->z() << endl;
 
     p3->setz(1000);
     cout << p3->z() << endl;
+
+    point& p222 = *p2;
+    cout << dynamic_cast<point2d*>(&p222)->y() << endl;
     delete p1;
     delete p2;
     delete p3;
