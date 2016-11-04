@@ -66,6 +66,7 @@ int main() {
 
     point& p222 = *p2;
     cout << dynamic_cast<point2d*>(&p222)->y() << endl;
+    cout << dynamic_cast<point2d*>(&p222)->point2d::y() << endl;
     delete p1;
     delete p2;
     delete p3;
