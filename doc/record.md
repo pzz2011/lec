@@ -45,3 +45,24 @@ If you have forg
 
 
 
+
+# Why should I use a pointer rather than the object itself?
+http://stackoverflow.com/questions/22146094/why-should-i-use-a-pointer-rather-than-the-object-itself
+I am coming from a Java background and have started working with objects in C++.
+But one thing that occurred to me is that people often use pointers to objects rather than 
+the objects themselves.
+for example this definition:
+    Object *myobject = new Object;
+    rather than 
+    Object myObject;
+
+Or instead of usign a fucntion, let's say testFunc(), like this:
+    myObject.testFunc();
+we have to write:
+    myObject->testFunc();
+
+But I can't figure out why should we do it this way.
+I would assume it has to do with efficiency and speed since it get direct access to the memory address.Am I right?
+
+
+
