@@ -3,7 +3,8 @@
 #include<cstdio>
 
 using namespace std;
-
+int a();
+int a();
 class point { 
 public: 
     point(float x_ = 0.0) : x_(x_) {  }
@@ -67,6 +68,8 @@ int main() {
     point& p222 = *p2;
     cout << dynamic_cast<point2d*>(&p222)->y() << endl;
     cout << dynamic_cast<point2d*>(&p222)->point2d::y() << endl;
+
+    point pp = *p1;
     delete p1;
     delete p2;
     delete p3;
